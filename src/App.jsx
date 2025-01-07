@@ -7,11 +7,14 @@ function App() {
         const tg = window.Telegram.WebApp;
         tg.expand();
 
+
         // Получение user_id
         const user_id = tg.initDataUnsafe.user?.id;
         setUserId(user_id); // Устанавливаем user_id в состояние
 
         console.log("User ID:", user_id);
+        console.log(tg.initDataUnsafe);
+        
     }, []);
 
     return (
